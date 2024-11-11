@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "survey": {
+    "survey-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/survey",
+            "outputPath": "dist/survey-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "survey:build:production"
+              "buildTarget": "survey-app:build:production"
             },
             "development": {
-              "buildTarget": "survey:build:development"
+              "buildTarget": "survey-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "5707d02f-73f2-489e-88e5-6d87fcda0d28"
   }
 }
