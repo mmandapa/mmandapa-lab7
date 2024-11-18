@@ -16,8 +16,8 @@ interface Survey {
   template: `
     <div>
       <h1></h1>
-      <app-survey-form (submitSurvey)="addSurvey($event)"></app-survey-form>
-      <app-survey-table [surveys]="surveys"></app-survey-table>
+      <app-survey-form></app-survey-form>
+      <app-survey-table></app-survey-table>
     </div>
   `
 })
