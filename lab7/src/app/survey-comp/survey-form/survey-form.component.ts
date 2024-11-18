@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-survey-form',
@@ -10,19 +10,18 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./survey-form.component.scss']
 })
 export class SurveyFormComponent {
+  @Output() submitSurvey = new EventEmitter<{ name: string; email: string; feedback: string }>();
+
   survey = {
     name: '',
     email: '',
     feedback: ''
   };
 
-  submitSurvey() {
-    console.log('Survey submitted:', this.survey);
-    // Reset form
-    this.survey = {
-      name: '',
-      email: '',
-      feedback: ''
-    };
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      this.submitSurvey.emit(this.survey);
+      form.resetForm();
+    }
   }
 }

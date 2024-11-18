@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Required for forms handling
+import { FormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
 import { SurveyFormComponent } from './survey-comp/survey-form/survey-form.component';
 import { SurveyTableComponent } from './survey-comp/survey-table/survey-table.component';
@@ -8,12 +8,12 @@ import { SurveyTableComponent } from './survey-comp/survey-table/survey-table.co
 @NgModule({
   declarations: [
     AppComponent,
-    SurveyFormComponent,  // Add SurveyFormComponent here
-    SurveyTableComponent, // Add SurveyTableComponent here
+    SurveyFormComponent,  
+    SurveyTableComponent, 
   ],
   imports: [
     BrowserModule,
-    FormsModule,  // Necessary for handling form inputs
+    FormsModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]

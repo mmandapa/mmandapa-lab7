@@ -1,6 +1,6 @@
 <div class="survey-table-container">
   <h2>Survey Table</h2>
-  <table>
+  <table *ngIf="surveys.length > 0; else noData">
     <thead>
       <tr>
         <th>Name</th>
@@ -16,4 +16,7 @@
       </tr>
     </tbody>
   </table>
+  <ng-template #noData>
+    <p>No survey data available. Please fill out the form to add data.</p>
+  </ng-template>
 </div>

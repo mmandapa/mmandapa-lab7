@@ -2,6 +2,7 @@ $primary-color: #007bff;
 $secondary-color: #f9f9f9;
 $border-color: #ddd;
 $text-color: #333;
+$button-hover-color: #0056b3;
 
 .survey-form-container {
   width: 100%;
@@ -12,11 +13,14 @@ $text-color: #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  border: 1px solid $border-color;
 
   h2 {
     margin-bottom: 1.5rem;
     text-align: center;
     color: $primary-color;
+    font-size: 1.6rem;
+    font-weight: bold;
   }
 
   .form-group {
@@ -27,6 +31,7 @@ $text-color: #333;
       margin-bottom: 0.5rem;
       font-weight: bold;
       color: $text-color;
+      font-size: 1.1rem;
     }
 
     input, textarea {
@@ -35,12 +40,21 @@ $text-color: #333;
       border: 1px solid $border-color;
       border-radius: 5px;
       font-size: 1rem;
+      transition: border-color 0.3s ease;
 
       &:focus {
         outline: none;
         border-color: $primary-color;
-        box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
       }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
     }
   }
 
@@ -57,7 +71,7 @@ $text-color: #333;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: $button-hover-color;
     }
   }
 }
